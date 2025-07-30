@@ -6,7 +6,7 @@ Nirmala Padmanabhan, Rebecca E. Twilley, Grace Jones, Shinichiro Oku, Mir Sohaye
 
 Neurexin1γ mediates synaptic transmission through structural integration of neurotransmitter release machinery and postsynaptic receptor nanodomains 
 
-This repository contains MATLAB and Python scripts used to estimate the expansion factor of tissue samples using fluorescence images, and to perform Monte Carlo statistical analysis of protein clustering and nearest-neighbor distances in 3D space.
+This repository contains MATLAB and Python scripts used to analysis the protein distribution of hippocampal tissue samples using fluorescence images, and to perform Monte Carlo statistical analysis of protein clustering and nearest-neighbor distances in 3D space.
 
 The sequence of operations:
 1)Imaris Analysis: Spot-to-Spot Distance Measurement XTension (Batch Compatible)
