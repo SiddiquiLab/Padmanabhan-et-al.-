@@ -32,4 +32,6 @@ Developed by Rebecca E. Twilley
 Files: add_range_together_columns.py, combine_mean_data_together.py, create_a_graph.py
   These Pyhon scripts combine the range and mean data together obtained from the Protein Clustering & Distance Analysis Python scripts. The output from these files can then be used in create_a_graph.py for data visualization.
 
+Those scripts have been tested in MATLAB R2021a and Google Colab.
+
 
