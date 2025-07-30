@@ -1,4 +1,4 @@
-# Padmanabhan-et-al. Expansion and Monte Carlo Analysis Code
+# Padmanabhan-et-al. Protein Distribution and Monte Carlo Analysis Code
 
 Associated with the _Padmanabhan et al. Cell_ Publication:
 
