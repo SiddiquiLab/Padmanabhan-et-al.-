@@ -10,7 +10,7 @@ This repository contains MATLAB and Python scripts used to analysis the protein 
 
 The sequence of operations:
 
-1)Imaris Analysis: Spot-to-Spot Distance Measurement XTension (Batch Compatible)
+1) Imaris Analysis: Spot-to-Spot Distance Measurement XTension (Batch Compatible)
 This set of MATLAB XTensions, originally developed by Matthew J. Gastinger, enables automated batch quantification of spatial relationships between spot objects in Imaris .ims files. The first script, SpotSpotDistance, measures the Euclidean distance from each spot in one object to all spots in a second object, saving minimum, mean, and maximum distances to a CSV file and embedding them in the Imaris statistics for downstream visualization or analysis. It supports multiple spot pairs per file and generates comprehensive pairwise metrics.
 The second script, XTBatchProcess, is a general-purpose Imaris batch processor. It prompts the user to choose one of their available XTensions and processes all .ims files in a selected directory and its subfolders, applying the selected function and saving results to a user-defined output folder. It was modified by Noushin Ahmadpour to integrate with SpotSpotDistance for large-scale processing of spatial synaptic analysis. 
 
