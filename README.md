@@ -1,6 +1,6 @@
-# Padmanabhan-et-al. Protein Distribution and Monte Carlo Analysis Code
+# Padmanabhan et al. Protein Distribution and Monte Carlo Analysis Code
 
-## Associated with the _Padmanabhan et al. Cell_ Publication:
+## Associated with the _Padmanabhan et al. Cell_ Publication.
 
 Nirmala Padmanabhan, Rebecca E. Twilley, Grace Jones, Shinichiro Oku, Mir Sohayeb Rabbi, Sandesh Acharya, Mohammed Abrar Basha, Dinu Rajapakse, Cosette Koltek, Nabiha Ameena, Noushin Amanpour, Ying Lao, Jiami Guo, Rene Zahedi, Mohiuddin Ahmad, Martin Hruska, Tabrez J. Siddiqui
 
