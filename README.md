@@ -11,7 +11,7 @@ This repository contains MATLAB and Python scripts used to analysis the protein 
 
 The sequence of operations:
 
-**1) Imaris Analysis: Spot-to-Spot Distance Measurement XTension**
+**1) Imaris Analysis: Centre of Mass & Spot-to-Spot Distance Measurement XTension**
    
 **Files:** CentreOfMassToSpots.m, SpotSpotDistance.m, XBatchProcess.m, XBatchProcess_spot.m
 
