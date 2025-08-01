@@ -25,7 +25,7 @@ The sequence of operations:
   
    XTBatchProcess.m and XTBatchProcess_spot.m allow batch processing of multiple .ims files using the above scripts across directory trees, saving results to a user-defined folder.
 
-
+   
 
 **2) Monte Carlo Validation Model**
 
