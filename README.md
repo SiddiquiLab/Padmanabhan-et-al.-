@@ -14,15 +14,15 @@ The sequence of operations:
    
 **Files:** CentreOfMassToSpots.m, SpotSpotDistance.m, XBatchProcess.m, XBatchProcess_spot.m
 
-**Developed by:** Matthew J. Gastinger, modified by Noushin Ahmadpour
+**Developed by:** Matthew J. Gastinger (original CentreOfMassToSpots.m), Pierre Pouchin (original XTBatchProcess.m), and Noushin Ahmadpour (SpotSpotDistance.m); scripts customized and modified by Noushin Ahmadpour
+This set of MATLAB XTensions enables automated batch quantification of spatial relationships between spot objects in Imaris .ims files.
 
-  This set of MATLAB XTensions enables automated batch quantification of spatial relationships between spot objects in Imaris .ims files.
-  
-  CentreOfMassToSpots.m converts surface objects into spot objects by extracting their center of homogeneous mass, assigning them a fixed 1 µm radius, and preserving original attributes such as color and tracking. The resulting spot object is appended to the Imaris scene. 
-  
-  SpotSpotDistance.m, measures the Euclidean distance from each spot object in one protein to all spots in a second protein, saving minimum, mean, and maximum distances to a CSV file.
-  
-   XTBatchProcess.m and XTBatchProcess_spot.m allow batch processing of multiple .ims files using the above scripts across directory trees, saving results to a user-defined folder.
+CentreOfMassToSpots.m converts surface objects into spot objects by extracting their center of homogeneous mass, assigning a fixed 1 µm radius, and preserving original attributes such as color and tracking. The resulting spot object is appended to the Imaris scene.
+
+SpotSpotDistance.m calculates the Euclidean distance from each spot in one protein to all spots in a second protein, saving minimum, mean, and maximum distances to a CSV file. Additionally, it reports the IDs of each minimum-distance pair.
+
+XTBatchProcess.m and XTBatchProcess_spot.m allow batch processing of multiple .ims files using the above scripts across directory trees, saving results to a user-defined folder.
+Save each XTension and its corresponding XTBatchProcess.m in a separate folder. To run each function in batch, add the directory to Imaris XTension Folders under Preferences → Custom Tools. The function will then appear under “Image Processing.”
 
    
 
