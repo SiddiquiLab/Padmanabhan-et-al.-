@@ -15,6 +15,7 @@ The sequence of operations:
 **Files:** CentreOfMassToSpots.m, SpotSpotDistance.m, XBatchProcess.m, XBatchProcess_spot.m
 
 **Developed by:** Matthew J. Gastinger (original CentreOfMassToSpots.m), Pierre Pouchin (original XTBatchProcess.m), and Noushin Ahmadpour (SpotSpotDistance.m); scripts customized and modified by Noushin Ahmadpour
+
 This set of MATLAB XTensions enables automated batch quantification of spatial relationships between spot objects in Imaris .ims files.
 
 CentreOfMassToSpots.m converts surface objects into spot objects by extracting their center of homogeneous mass, assigning a fixed 1 µm radius, and preserving original attributes such as color and tracking. The resulting spot object is appended to the Imaris scene.
