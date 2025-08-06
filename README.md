@@ -2,7 +2,7 @@
 
 ## Associated with the _Padmanabhan et al. (Submitted to Cell)
 
-Nirmala Padmanabhan, Rebecca E. Twilley, Grace Jones, Shinichiro Oku, Mir Sohayeb Rabbi, Sandesh Acharya, Mohammed Abrar Basha, Dinu Rajapakse, Cosette Koltek, Nabiha Ameena, Noushin Amanpour, Ying Lao, Jiami Guo, Rene Zahedi, Mohiuddin Ahmad, Martin Hruska, Tabrez J. Siddiqui
+Nirmala Padmanabhan, Rebecca E. Twilley, Grace Jones, Shinichiro Oku, Mir Sohayeb Rabbi, Sandesh Acharya, Mohammed Abrar Basha, Dinu Rajapakse, Cosette Koltek, Nabiha Ameena, Noushin Ahmadpour, Ying Lao, Jiami Guo, Rene Zahedi, Mohiuddin Ahmad, Martin Hruska, Tabrez J. Siddiqui
 
 
 This repository contains MATLAB and Python scripts used to analysis the protein distribution of hippocampal tissue samples using fluorescence images, and to perform Monte Carlo statistical analysis of protein clustering and nearest-neighbor distances in 3D space.
