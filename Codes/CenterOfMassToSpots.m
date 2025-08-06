@@ -2,7 +2,6 @@
 
 %Written by Matthew J. Gastinger, Bitplane Advanced Application Scientist.  
 %March 2014.
-%
 %<CustomTools>
 %      <Menu>
 %       <Submenu name="Surfaces Functions">
@@ -22,16 +21,29 @@
 % 
 %Description
 %
-%This XTension wil collect the XYZ positon of the surface based on the
+%This XTension will collect the XYZ position of the surface based on the
 %center of homogeneous mass, and plot those positions as a Spots object.  It will do
 %this in all time points, for all or a selected group of surfaces. 
 %
-% Modified by Noushin Ahmadpour for XTBatchProcess XTesnion. This modified
-% version does not require surface selection in Imaris Scene. It finds all
-% the surfaces if none is selected. It also updates te ims file by adding
-% the new center of mass spots and saves it in its original directory. 
+%% 
+% Modified by Noushin Ahmadpour
+% Live Cell Imaging Facility, University of Manitoba
+% September 2024
+%
+% This script has been adapted for use with the XTBatchProcess XTension
+% to enable batch processing of the "Center of Mass to Spots" function.
+%
+% In this modified version, manual surface selection in the Imaris scene
+% is not required. If no surfaces are selected, the script automatically
+% identifies all available surfaces.
+%
+% The script updates each .ims file by adding new center of mass spots
+% and saves the modified file in its original directory.
 
-function CenterOfMassToSpots(aImarisApplicationID)
+%% 
+
+
+function CenterOfMassToSpots2(aImarisApplicationID)
 if ~isa(aImarisApplicationID, 'Imaris.IApplicationPrxHelper')
   javaaddpath ImarisLib.jar
   vImarisLib = ImarisLib;
@@ -71,12 +83,14 @@ function createSpotForCenterOfMass(vImarisApplication, vSurfaces)
     vNumberOfSurfaces = vSurfaces.GetNumberOfSurfaces;
     vPositionFinal = [];
     vTimeIndexFinal = [];
-    
+    vIds = [];
+
     for c = 0:vNumberOfSurfaces-1
         vPositionXYZ = vSurfaces.GetCenterOfMass(c);
         vPositionFinal = [vPositionFinal; vPositionXYZ];
         vTimeIndex = vSurfaces.GetTimeIndex(c);
         vTimeIndexFinal = [vTimeIndexFinal; vTimeIndex];
+        vIds = [vIds; c]; % Store the surface ID
     end
     
     if max(vTimeIndexFinal) > 0
@@ -103,6 +117,7 @@ function createSpotForCenterOfMass(vImarisApplication, vSurfaces)
     vNewSpots.SetColorRGBA(vRGBA);
     vNewSpots.SetName([char(vSurfaces.GetName), ' Center of Mass']);
     vNewSpots.SetTrackEdges(vSurfaces.GetTrackEdges);
+    vNewSpots.SetIds(vIds); % Set the IDs to match the surface IDs
     vSurfaces.SetVisible(0);
     vSurfaces.GetParent.AddChild(vNewSpots, -1);
 end
@@ -111,6 +126,6 @@ end
 vFileNameString = vImarisApplication.GetCurrentFileName; % returns ‘C:/Imaris/Images/retina.ims’
 vFileName = char(vFileNameString);
 [vOldFolder, vName, vExt] = fileparts(vFileName); % returns [‘C:/Imaris/Images/’, ‘retina’, ‘.ims’]
-vNewFileName = fullfile('E:\Rebecca\2x Flag\Imaris', [vName, vExt]); % returns ‘c:/BitplaneBatchOutput/retina.ims’
+vNewFileName = fullfile('E:\ADMIN\Rebecca\BatchXTension example', [vName, vExt]); % returns ‘c:/BitplaneBatchOutput/retina.ims’
 vImarisApplication.FileSave(vNewFileName, '');
 end

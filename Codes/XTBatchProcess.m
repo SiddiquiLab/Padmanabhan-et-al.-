@@ -21,8 +21,10 @@
 %
 %  Description:
 %
-%   This XTension batch processes images.
-%   edited by Noushin Ahmadpour to make catch error work with Matlab R2023
+%% 
+%   Modified by Noushin Ahmadpour, Imaging Specialist, Live Cell Imaging
+%   Facility, University of Manitoba, to make catch error work with Matlab
+%   R2023. September 2024
 %
 %
 function XTBatchProcess(aImarisApplicationID)
